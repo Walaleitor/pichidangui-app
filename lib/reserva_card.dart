@@ -25,9 +25,9 @@ class ReservaCard extends StatelessWidget {
             RoundedRectangleBorder(borderRadius: BorderRadius.circular(30.0)),
         borderOnForeground: true,
         elevation: 5,
-        margin: EdgeInsets.all(10),
+        margin: EdgeInsets.only(top: 10.0, right: 10.0, left: 10.0),
         child: ClipRRect(
-          borderRadius: BorderRadius.circular(30.0),
+          borderRadius: BorderRadius.circular(20.0),
           child: _dibujarInterior(),
         ));
   }
@@ -48,6 +48,13 @@ class ReservaCard extends StatelessWidget {
             style: TextStyle(
               fontSize: 25.0,
               color: Colors.white,
+              shadows: <Shadow>[
+                Shadow(
+                  offset: Offset(3.0,2.0),
+                  blurRadius: 3.0,
+                  color: Colors.black
+                ),
+              ]
             ),
           ),
         ),
@@ -56,7 +63,17 @@ class ReservaCard extends StatelessWidget {
           right: 20.0,
           child: Text(
             _fechasReserva,
-            style: TextStyle(fontSize: 19.0, color: Colors.white),
+            style: TextStyle(
+              fontSize: 19.0, 
+              color: Colors.white,
+              shadows: <Shadow>[
+                Shadow(
+                  offset: Offset(3.0,2.0),
+                  blurRadius: 3.0,
+                  color: Colors.black
+                ),
+              ]
+              ),
           ),
         ),
         Positioned(
@@ -64,7 +81,17 @@ class ReservaCard extends StatelessWidget {
           right: 35.0,
           child: Text(
             _mes,
-            style: TextStyle(fontSize: 24.0, color: Colors.white),
+            style: TextStyle(
+              fontSize: 24.0,
+              color: Colors.white,
+              shadows: <Shadow>[
+                Shadow(
+                  offset: Offset(3.0,2.0),
+                  blurRadius: 3.0,
+                  color: Colors.black
+                ),
+              ],
+            ),
           ),
         ),
       ],
